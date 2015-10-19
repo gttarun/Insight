@@ -13,7 +13,12 @@
             <a href="{{ url_for('newPoll') }}">New Post</a>
         </nav>
         <div>
-            <h3>Put all polls the user created here.</h3>
+            <!--- for loop for user created polls -->
+            {% for poll in polls %}
+                {% for info in poll %}
+                    <a href={{info[0]}}>{{info[1]}}</a>
+                {% endfor %}
+            {% endfor %}
         </div>
     </body>
 </html>
