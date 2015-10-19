@@ -1,0 +1,26 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>flask test</title>
+    </head>
+    <body>
+        <div>
+            <h1>Insight</h1>
+        </div>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('feed') }}">Feed</a>
+            <a href="{{ url_for('newPoll') }}">New Post</a>
+        </nav>
+        <div>
+            <form method="post" action="{{ url_for('stats') }}">
+                <h3>{{question}}</h3>
+                <input type="radio" name="choice" value={{choice_a}}>{{choice_a}}<br>
+                <input type="radio" name="choice" value={{choice_b}}>{{choice_b}}<br>
+                <input type="radio" name="choice" value={{choice_c}}>{{choice_c}}<br>
+                <input type="radio" name="choice" value={{choice_d}}>{{choice_d}}<br><br>
+                <input type="submit">
+            </form>
+        </div>
+    </body>
+</html>

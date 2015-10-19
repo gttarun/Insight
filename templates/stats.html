@@ -1,0 +1,22 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>flask test</title>
+    </head>
+    <body>
+        <div>
+            <h1>Insight</h1>
+        </div>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('feed') }}">Feed</a>
+            <a href="{{ url_for('newPoll') }}">New Post</a>
+        </nav>
+        <div>
+            <h3> Choice A: {{choice_a}} </h3>
+            <h3> Choice B: {{choice_b}} </h3>
+            <h3> Choice C: {{choice_c}} </h3>
+            <h3> Choice D: {{choice_d}} </h3>   
+        </div>
+    </body>
+</html>
